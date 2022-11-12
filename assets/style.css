@@ -2,6 +2,10 @@ body {
     background-color: white;
 }
 
-.hidden {
+#hidden {
+    display: none;
+}
+
+#questionsContainer {
     display: none;
 }

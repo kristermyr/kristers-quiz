@@ -1,7 +1,7 @@
-var timerElement = document.querySelector(".timer-count");
-var startButton = document.querySelector(".start-button");
-var questions = document.querySelector(".questions");
-var answers = document.querySelector(".questions-container");
+var timerElement = document.querySelector("#timer-count");
+var startButton = document.querySelector("#start-button");
+var questions = document.querySelector("#questionsContainer");
+//var answers = document.querySelector(".questions-container");
 var answer1 = document.querySelector(".answer1");
 var secondsLeft = 5;
 var questionBank = ["question 1", "question 2", "question 3", "question 4", "question 5", "question 6", "question 7", "question 8", "question 9", "question 10"];
@@ -17,10 +17,11 @@ answers.textcontent = answersBank
   }*/
 
 function startGame(){
-    startButton.classList.add('hidden');
+    startButton.setAttribute("style", "display: none");
+    questions.setAttribute("style", "display: block");
     console.log("start game");
-
 }  
+
 function selectAnswer(){
 
 }
@@ -37,19 +38,7 @@ function startTimer() {             //timer function
     
 }
 
-window.onload = function() {   //runs the showQuestion1 function that hides the question div
-    showQuestion1();
-    
-}
-function showQuestion1() {
-    if (display == 1)
-    {
-        answer1.style.display = "block";
-        display = 0;
-    }else{answer1.style.display = "none";
-display = 1;}
-    
-};
+
 
 
 
@@ -58,7 +47,7 @@ display = 1;}
 startButton.addEventListener("click", function() {
     startGame();
     startTimer();
-    showQuestion1();
+    
    
 
 
