@@ -17,6 +17,8 @@ answers.textcontent = answersBank
   }*/
 
 function startGame(){
+    startButton.classList.add('hidden');
+    console.log("start game");
 
 }  
 function selectAnswer(){
@@ -54,12 +56,13 @@ display = 1;}
 
 
 startButton.addEventListener("click", function() {
+    startGame();
     startTimer();
     showQuestion1();
-    startGame();
-    console.log("button works!")
-    
-   // startGame();
+   
+
+
+   
 });
    
 
