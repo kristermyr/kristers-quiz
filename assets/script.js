@@ -3,58 +3,29 @@ var questionContainerElement = document.getElementById("questions-container");
 const questionElement = document.getElementById("question")
 const answerBtnsElement = document.getElementById("answer-buttons")
 var timerElement = document.querySelector("#timer-count");
-var shuffledQuestions, currentQuestionIndex
+var correctAnswer = document.getElementbyId("correct-btn");
 startButton.addEventListener("click", function() {
     startGame();
     startTimer();
 });
+correctAnswer.addEventListener("click", function) {
+    correctBtn();
+}
 
-
-//var answers = document.querySelector(".questions-container");
 var secondsLeft = 5;
 var display =0;
-
-// Start the timer
-
-
-/*function startGame() {
-   questions.textcontent = questionBank [i =0];
-answers.textcontent = answersBank
-  }*/
 
   function startGame(){
     console.log("start game");
     startButton.classList.add("hide")
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
     questionContainerElement.classList.remove("hide")
-    setNextQuestion();
+  }
+function correctBtn (){
+    console.log("button works")
+}
    
-}  
 
 
-
-const questions = [
-    { question: "What is the capital of France?",
-      answers: [
-        {text: "Paris", correct: true},
-        {text: "London", correct: false},
-    ] 
-    }
-    ]
-
-function selectAnswer(){
-
-}
-
-function setNextQuestion() {
-    showQuestion(shuffledQuestions[currentQuestionIndex])
-}
-
-function showQuestion(question){
-    questionElement.innerText = question.question
-}
-    
 function startTimer() {             //timer function
     var timerInterval = setInterval(function(){
     secondsLeft --;
@@ -66,8 +37,3 @@ function startTimer() {             //timer function
 }, 1000);
     
 }
-
-
-
-
-
