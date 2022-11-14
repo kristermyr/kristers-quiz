@@ -6,6 +6,11 @@ body {
     display: none;
 }
 
+
 .quizOver {
+    display: none;
+}
+
+.highscores{
     display: none;
 }
