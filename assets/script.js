@@ -14,7 +14,6 @@ var correctAnswer5 = document.getElementById("correct-btn5");
 var correctAnswer6 = document.getElementById("correct-btn6");
 var correctAnswer7 = document.getElementById("correct-btn7");
 var correctAnswer8 = document.getElementById("correct-btn8");
-
 var question1 = document.getElementById("question1");
 var question2 = document.getElementById("question2");
 var question3 = document.getElementById("question3");
@@ -31,6 +30,7 @@ var wrongButtons5 = document.querySelectorAll(".wrong-btn5");
 var wrongButtons6 = document.querySelectorAll(".wrong-btn6");
 var wrongButtons7 = document.querySelectorAll(".wrong-btn7");
 var wrongButtons8 = document.querySelectorAll(".wrong-btn8");
+
 
 
 wrongButtons.forEach((btn) => {
@@ -96,6 +96,7 @@ function startTimer() {             //timer function
     document.getElementById("score").innerHTML = secondsLeft;
     if (secondsLeft === 0) {
         clearInterval(timerInterval);
+    
     }
 }, 1000);
     
@@ -237,8 +238,16 @@ function wrongBtn8() {
     secondsLeft = secondsLeft - 10;
     clearInterval(timerInterval);
    
-    
+
 }
 function finalScore(){
-secondsLeft = document.getElementbyId("score").innerHTML;
+    
 }
+
+
+function highScore(){
+    quizOver.classList.add("hide")
+    highScores.classList.remove("hide")
+}
+
+
