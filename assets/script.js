@@ -1,8 +1,9 @@
 var startButton = document.getElementById("start-btn");
 var questionContainerElement = document.getElementById("questions-container");
-const questionElement = document.getElementById("question")
-const answerBtnsElement = document.getElementById("answer-buttons")
+const questionElement = document.getElementById("question");
+const answerBtnsElement = document.getElementById("answer-buttons");
 var quizOver = document.getElementById("quizOver");
+
 var timerInterval 
 var timerElement = document.querySelector("#timer-count");
 var correctAnswer1 = document.getElementById("correct-btn1");
@@ -92,7 +93,7 @@ function startTimer() {             //timer function
     timerInterval = setInterval(function(){
     secondsLeft --;
     timerElement.textContent = secondsLeft;
-
+    document.getElementById("score").innerHTML = secondsLeft;
     if (secondsLeft === 0) {
         clearInterval(timerInterval);
     }
@@ -180,6 +181,7 @@ function correctBtn8 (){                  //correct answer function
     secondsLeft = secondsLeft + 10;
     clearInterval(timerInterval);
     console.log("button8");
+    
 }
 
 function wrongBtn() {
@@ -231,7 +233,12 @@ function wrongBtn7() {
 function wrongBtn8() {
     
     question8.classList.add("hide")
+    quizOver.classList.remove("hide")
     secondsLeft = secondsLeft - 10;
     clearInterval(timerInterval);
+   
     
+}
+function finalScore(){
+secondsLeft = document.getElementbyId("score").innerHTML;
 }
