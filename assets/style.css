@@ -1,3 +1,10 @@
+*{
+background-color: white;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
 body {
     background-color: white;
 }
@@ -11,6 +18,25 @@ body {
     display: none;
 }
 
-.highscores{
-    display: none;
+.start {
+    display: flex;
+    justify-content: center;
+}
+
+#timer {
+    display: flex;
+    justify-content: end;
+    color: purple;
+
+}   
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#highScores{
+    
+   text-align: center;
 }

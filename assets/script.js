@@ -3,6 +3,9 @@ var questionContainerElement = document.getElementById("questions-container");
 const questionElement = document.getElementById("question");
 const answerBtnsElement = document.getElementById("answer-buttons");
 var quizOver = document.getElementById("quizOver");
+var submitScore = document.getElementById("submit");
+var highScores = document.getElementById("highScores");
+var highScoreBtn = document.getElementById("highScoreBtn");
 
 var timerInterval 
 var timerElement = document.querySelector("#timer-count");
@@ -32,6 +35,14 @@ var wrongButtons7 = document.querySelectorAll(".wrong-btn7");
 var wrongButtons8 = document.querySelectorAll(".wrong-btn8");
 
 
+submitScore.addEventListener("click", function() {    
+    submit();
+});
+function submit() {
+
+    highScores.classList.remove("hide")
+
+}
 
 wrongButtons.forEach((btn) => {
     return btn.addEventListener("click", (event) => {
@@ -89,18 +100,6 @@ var display =0;
        
 } 
 
-function startTimer() {             //timer function
-    timerInterval = setInterval(function(){
-    secondsLeft --;
-    timerElement.textContent = secondsLeft;
-    document.getElementById("score").innerHTML = secondsLeft;
-    if (secondsLeft === 0) {
-        clearInterval(timerInterval);
-    
-    }
-}, 1000);
-    
-}
 correctAnswer1.addEventListener("click", function() {    //correct answer button  
     correctBtn1();
 });
@@ -238,16 +237,24 @@ function wrongBtn8() {
     secondsLeft = secondsLeft - 10;
     clearInterval(timerInterval);
    
-
 }
-function finalScore(){
+
+
+
+
+
+
+
+
+function startTimer() {             //timer function
+    timerInterval = setInterval(function(){
+    secondsLeft --;
+    timerElement.textContent = secondsLeft;
+    document.getElementById("score").innerHTML = secondsLeft;
+    if (secondsLeft === 0) {
+        clearInterval(timerInterval);
+    
+    }
+}, 1000);
     
 }
-
-
-function highScore(){
-    quizOver.classList.add("hide")
-    highScores.classList.remove("hide")
-}
-
-
