@@ -6,7 +6,6 @@ var quizOver = document.getElementById("quizOver");
 var submitScore = document.getElementById("submit");
 var highScores = document.getElementById("highScores");
 var highScoreBtn = document.getElementById("highScoreBtn");
-var score;
 var timerInterval 
 var timerElement = document.querySelector("#timer-count");
 var correctAnswer1 = document.getElementById("correct-btn1");
@@ -33,7 +32,7 @@ var wrongButtons5 = document.querySelectorAll(".wrong-btn5");
 var wrongButtons6 = document.querySelectorAll(".wrong-btn6");
 var wrongButtons7 = document.querySelectorAll(".wrong-btn7");
 var wrongButtons8 = document.querySelectorAll(".wrong-btn8");
-
+var initialsSpan = document.querySelector("initials");
 
 submitScore.addEventListener("click", function() {    
     submit();
@@ -239,8 +238,6 @@ function wrongBtn8() {
    
 }
 
-var scoreResult = [];
-
 function startTimer() {             //timer function
     timerInterval = setInterval(function(){
     secondsLeft --;
@@ -257,3 +254,5 @@ function startTimer() {             //timer function
 }, 1000);
 
 }
+
+
