@@ -246,12 +246,13 @@ function startTimer() {             //timer function
     secondsLeft --;
     timerElement.textContent = secondsLeft;
     document.getElementById("score").innerHTML = secondsLeft;
+    localStorage.setItem("score" , secondsLeft);
     if (secondsLeft === 0) {
-        clearInterval(timerInterval);
+        clearInterval(timerInterval);    
     if (secondsLeft === 0) {
         alert("Time's up!");
     }
-   
+
     }
 }, 1000);
 
