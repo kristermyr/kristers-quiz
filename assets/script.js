@@ -6,7 +6,7 @@ var quizOver = document.getElementById("quizOver");
 var submitScore = document.getElementById("submit");
 var highScores = document.getElementById("highScores");
 var highScoreBtn = document.getElementById("highScoreBtn");
-
+var score;
 var timerInterval 
 var timerElement = document.querySelector("#timer-count");
 var correctAnswer1 = document.getElementById("correct-btn1");
@@ -239,12 +239,7 @@ function wrongBtn8() {
    
 }
 
-
-
-
-
-
-
+var scoreResult = [];
 
 function startTimer() {             //timer function
     timerInterval = setInterval(function(){
@@ -253,8 +248,11 @@ function startTimer() {             //timer function
     document.getElementById("score").innerHTML = secondsLeft;
     if (secondsLeft === 0) {
         clearInterval(timerInterval);
-    
+    if (secondsLeft === 0) {
+        alert("Time's up!");
+    }
+   
     }
 }, 1000);
-    
+
 }
