@@ -34,6 +34,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    line-height: 50px;
 }
 
 #highScores{
@@ -51,3 +53,4 @@ h1 {
     font-size: 50px;
     margin: 50px;
 }
+

@@ -1,11 +1,10 @@
 var startButton = document.getElementById("start-btn");
 var questionContainerElement = document.getElementById("questions-container");
-const questionElement = document.getElementById("question");
-const answerBtnsElement = document.getElementById("answer-buttons");
 var quizOver = document.getElementById("quizOver");
 var submitScore = document.getElementById("submit");
 var highScores = document.getElementById("highScores");
 var highScoreBtn = document.getElementById("highScoreBtn");
+
 var timerInterval 
 var timerElement = document.querySelector("#timer-count");
 var correctAnswer1 = document.getElementById("correct-btn1");
@@ -32,10 +31,11 @@ var wrongButtons5 = document.querySelectorAll(".wrong-btn5");
 var wrongButtons6 = document.querySelectorAll(".wrong-btn6");
 var wrongButtons7 = document.querySelectorAll(".wrong-btn7");
 var wrongButtons8 = document.querySelectorAll(".wrong-btn8");
-var initialsSpan = document.querySelector("initials");
+
 
 submitScore.addEventListener("click", function() {    
     submit();
+    lastRegistrered()
 });
 function submit() {
 
@@ -252,7 +252,12 @@ function startTimer() {             //timer function
 
     }
 }, 1000);
-
 }
+var scoreCollector= [];
+var initials = document.querySelector(".finalScore");
 
-
+function lastRegistrered() {
+    var finalScore = localStorage.getItem("score");
+    initials.textContent = finalScore;
+    
+}
