@@ -17,19 +17,19 @@
         <text>Timer:</text>  
             <div class = "timer-card">
               
-            <div id="timer-count">90</div>
+            <div id="timer-count">90</div>          <!--Timer Starts at 90-->
             <h3>seconds remaining</h3>
           </div>
 
     </div>
     <div class = "start">
-    <button id="start-btn" class="start-btn btn">Start Game</button>
+    <button id="start-btn" class="start-btn btn">Start Game</button> <!--button to start game-->
     </div>
     <div class="container"> 
         
         <div id= "questions-container" class ="hide">
         <div id="question1">
-            <p>How can you get the total number of arguments passed to a function?</p>
+            <p>How can you get the total number of arguments passed to a function?</p>        <!--questions with classes for right and wrong, starts in display:none, to not be visible -->
             <div id="answer-buttons" class="btn-grid">
                 <button id="correct-btn1">Using arguments.length property</button>
                 <button class="wrong-btn">Using args.length property</button>
@@ -107,19 +107,21 @@
         
     </div>
 
-    <div id="quizOver" class="hide">
+    <div id="quizOver" class="hide">          <!--quiz finished page-->
         <h1>Quiz Over!</h1>
-        <h3>Final Score:<p id="score"></p></h3>
+        <h3>Final Score:<p id="score"></p></h3>  <!--score is displayed-->
         <div id="timer-count"></div>
-        <input type="text" id="name" placeholder="Enter Name">
-        <button id="submit">Submit</button>
+        <input type="text" name="name" id="typeInitial" placeholder="JD">
+        <button id="submit">Submit</button> <!--submit score button-->
         </div>
     </div>
 
-    <div id="highScores" class ="hide">
+    <div id="highScores" class ="hide">   <!--highscores page-->
         <h2>Highscores</h2>
         <ol>
-            <li class="finalScore">Initials here</li>
+            <li class="finalScore">Initials here</li> <!--highscores are displayed, currently the score is shown, but not name of the player-->
+            <p><span id="initial"></span></p>
+            <li>Initials here</li>
             <li>Initials here</li>
             <li>Initials here</li>
         </ol>

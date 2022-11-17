@@ -33,18 +33,19 @@ var wrongButtons7 = document.querySelectorAll(".wrong-btn7");
 var wrongButtons8 = document.querySelectorAll(".wrong-btn8");
 
 
-submitScore.addEventListener("click", function() {    
+submitScore.addEventListener("click", function() {    // submits the final score to the highscore list
     submit();
     lastRegistrered()
 });
 function submit() {
 
-    highScores.classList.remove("hide")
+    highScores.classList.remove("hide")    // makes the highscore list visible
+    
 
 }
 
 wrongButtons.forEach((btn) => {
-    return btn.addEventListener("click", (event) => {
+    return btn.addEventListener("click", (event) => {   //for.each function for the wrong buttons. The event listener did not want to work on more than one button on its own 
         wrongBtn();
     });
 })
@@ -84,12 +85,12 @@ wrongButtons8.forEach((btn) => {
     });
 })
 
-startButton.addEventListener("click", function() {
+startButton.addEventListener("click", function() {   //starts the game and timer countdown
     startGame();
     startTimer();
 });
 
-var secondsLeft = 90;
+var secondsLeft = 90;       //what the timer starts at
 var display =0;
 
   function startGame(){
@@ -99,32 +100,31 @@ var display =0;
        
 } 
 
-correctAnswer1.addEventListener("click", function() {    //correct answer button  
+correctAnswer1.addEventListener("click", function() {    // event listeners for correct answer buttons   
     correctBtn1();
 });
-correctAnswer2.addEventListener("click", function() {    //correct answer button  
+correctAnswer2.addEventListener("click", function() {    
     correctBtn2();
 });
-correctAnswer3.addEventListener("click", function() {    //correct answer button  
+correctAnswer3.addEventListener("click", function() {    
     correctBtn3();
 });
-correctAnswer4.addEventListener("click", function() {    //correct answer button  
+correctAnswer4.addEventListener("click", function() {     
     correctBtn4();
 });
-correctAnswer5.addEventListener("click", function() {    //correct answer button  
+correctAnswer5.addEventListener("click", function() {      
     correctBtn5();
 });
-correctAnswer6.addEventListener("click", function() {    //correct answer button  
-    correctBtn6();
+correctAnswer6.addEventListener("click", function() {   
 });
-correctAnswer7.addEventListener("click", function() {    //correct answer button  
+correctAnswer7.addEventListener("click", function() {    
     correctBtn7();
 });
-correctAnswer8.addEventListener("click", function() {    //correct answer button  
+correctAnswer8.addEventListener("click", function() {     
     correctBtn8();
 });
 
-function correctBtn1 (){                  //correct answer function
+function correctBtn1 (){                  //correct answer function, one function for each question, adds 10 seconds to the timer if answered correctly. removes the question and shows the next question when clicked
     
     question1.classList.add("hide")
     question2.classList.remove("hide")
@@ -183,7 +183,7 @@ function correctBtn8 (){                  //correct answer function
     
 }
 
-function wrongBtn() {
+function wrongBtn() {                       //correct answer function, one function for each question, adds 10 seconds penalty to the timer if answered incorrectly. removes the question and shows the next question when clicked
 
     question1.classList.add("hide")
     question2.classList.remove("hide")
@@ -238,7 +238,7 @@ function wrongBtn8() {
    
 }
 
-function startTimer() {             //timer function
+function startTimer() {             //timer function with output to local storage
     timerInterval = setInterval(function(){
     secondsLeft --;
     timerElement.textContent = secondsLeft;
@@ -253,11 +253,12 @@ function startTimer() {             //timer function
     }
 }, 1000);
 }
-var scoreCollector= [];
+
 var initials = document.querySelector(".finalScore");
+
 
 function lastRegistrered() {
     var finalScore = localStorage.getItem("score");
-    initials.textContent = finalScore;
-    
+    initials.textContent = finalScore;  // outputs the final score to the high score list
 }
+
