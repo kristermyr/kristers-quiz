@@ -131,49 +131,49 @@ function correctBtn1 (){                  //correct answer function, one functio
     secondsLeft = secondsLeft + 10;
     console.log("button1");
 }   
-function correctBtn2 (){                  //correct answer function
+function correctBtn2 (){                  
     
     question2.classList.add("hide")
     question3.classList.remove("hide")
     secondsLeft = secondsLeft + 10;
     console.log("button2");
 }  
-function correctBtn3 (){                  //correct answer function
+function correctBtn3 (){                  
     
     question3.classList.add("hide")
     question4.classList.remove("hide")
     secondsLeft = secondsLeft + 10;
     console.log("button3");
 }  
-function correctBtn4 (){                  //correct answer function
+function correctBtn4 (){                  
     
     question4.classList.add("hide")
     question5.classList.remove("hide")
     secondsLeft = secondsLeft + 10;
     console.log("button4");
 }
-function correctBtn5 (){                  //correct answer function
+function correctBtn5 (){                  
     
     question5.classList.add("hide")
     question6.classList.remove("hide")
     secondsLeft = secondsLeft + 10;
     console.log("button5");
 }
-function correctBtn6 (){                  //correct answer function
+function correctBtn6 (){                  
     
     question6.classList.add("hide")
     question7.classList.remove("hide")
     secondsLeft = secondsLeft + 10;
     console.log("button6");
 }
-function correctBtn7 (){                  //correct answer function
+function correctBtn7 (){                  
     
     question7.classList.add("hide")
     question8.classList.remove("hide")
     secondsLeft = secondsLeft + 10;
     console.log("button7");
 }
-function correctBtn8 (){                  //correct answer function
+function correctBtn8 (){                  
     
     question8.classList.add("hide")
     quizOver.classList.remove("hide")
@@ -242,7 +242,7 @@ function startTimer() {             //timer function with output to local storag
     timerInterval = setInterval(function(){
     secondsLeft --;
     timerElement.textContent = secondsLeft;
-    document.getElementById("score").innerHTML = secondsLeft;
+    document.getElementById("score").innerHTML = secondsLeft;   //sends the score to the local storage
     localStorage.setItem("score" , secondsLeft);
     if (secondsLeft === 0) {
         clearInterval(timerInterval);    

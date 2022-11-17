@@ -6,8 +6,8 @@ While This page is not the most efficient, I believe that found a good solution 
 
 
 ## Installation
-Website URL: https://kristermyr.github.io/krister-password-generator-refactor/
-Open Github: https://github.com/kristermyr/krister-password-generator-refactor.git
+Website URL: https://kristermyr.github.io/kristers-quiz/
+Open Github: https://github.com/kristermyr/kristers-quiz.git
 
 ## Usage
 
@@ -29,22 +29,14 @@ THEN I can save my initials and score
 
 ## Credits and resources
 
-## Articles:
-https://www.tutorialspoint.com/check-if-input-is-a-number-or-letter-in-javascript  
-https://stackoverflow.com/questions/20816723/return-a-string-value-when-boolean-is-true  
-https://htmlcheatsheet.com/js/  
-https://www.w3schools.com/jsref/jsref_push.asp  
-FreeCodeCamp challenge #48 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/shopping-list
-
 ## Youtube:
-https://www.youtube.com/watch?v=JheVaV6bPvE&ab_channel=freeCodeCamp.org  
-https://www.youtube.com/watch?v=x4HUaiazDes&ab_channel=PaulKeldsen-WebDevelopment  
-https://www.youtube.com/watch?v=ssYo9t37pE4&t=369s&ab_channel=OpenJavaScript  
-https://www.youtube.com/watch?v=iLx4ma8ZqvQ&ab_channel=freeCodeCamp.org  
+https://www.youtube.com/watch?v=hG0YDpePCjI&t=1094s&ab_channel=WebTutsAditi
+https://www.youtube.com/watch?v=riDzcEQbX6k&t=1173s&ab_channel=WebDevSimplified
+https://www.youtube.com/watch?v=zZdQGs62cR8
 
 ## Collaborators:
 Salahuddin Asim 
-Github: https://github.com/Sal8298/password-generator-week-3.gits
+Dylan Qualee
 
 ## License
 
